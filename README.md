@@ -1,2 +1,3 @@
-# README-Creator
-a command line application that uses node.js, inquirer, and file system to create a README
+# Professional README Generator Starter Code
+
+[How to create a Professional README](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
