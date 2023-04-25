@@ -15,6 +15,7 @@ function generateMarkdown(data) {
   return `
 # ${data.title}
 ## Description
+${data.description}
 
 ## Table of Contents
 * [Installation](#installation)
@@ -25,11 +26,24 @@ function generateMarkdown(data) {
 * [Questions](#questions)
 
 ## Installation
+${data.installation}
+
 ## Usage
+${data.usage}
+
 ## License
+${data.license}
+
 ## Contributing
+${data.contributing}
+
 ## Tests
+${data.test}
+
 ## Questions
+[My Github Profile](${data.github})
+For Questions, you can email me at [${data.email}](mailto:${data.email})
+
 `;
 }
 

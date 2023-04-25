@@ -5,7 +5,7 @@ const fs = require = ('fs')
 
 // TODO: Create an array of questions for user input
 // const licenses = Choices(["Choice A", "choice B"])
-const questions = ['What is the title of your project?', 'Write a short description of your project', 'write instructions on how to install the application', 'explain how to use the application', 'Chose a License', 'Explain your contributing guidlines', 'Write out instructions on how to test the application'];
+const questions = ['What is the title of your project?', 'Write a short description of your project', 'Write instructions on how to install the application', 'Write out how to use the application', 'Chose a License', 'Write out your contributing guidlines', 'Write out instructions on how to test the application', 'Write out instructions on how to test the application', 'What is your Github username?', 'What is your email?'];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
@@ -48,9 +48,24 @@ function init() {
                 message: questions[5],
                 name: 'contributing',
             },
+            {
+                type: 'editor',
+                message: questions[6],
+                name: 'test',
+            },
+            {
+                type: 'editor',
+                message: questions[7],
+                name: 'github',
+            },
+            {
+                type: 'editor',
+                message: questions[8],
+                name: 'email',
+            },
         ])
         .then((response) => {
-            // markdown.generateMarkdown(response);
+            markdown.generateMarkdown(response);
             console.log(response.title);
             console.log(response.description);
             console.log(response.license);
