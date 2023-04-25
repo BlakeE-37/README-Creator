@@ -45,7 +45,7 @@ function init() {
             },
             {
                 type: 'editor',
-                message: questions[4],
+                message: questions[5],
                 name: 'contributing',
             },
         ])
