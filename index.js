@@ -39,7 +39,7 @@ function init() {
             },
             {
                 type: 'list',
-                choices: ['MIT License', 'IBM', 'ISC', 'Eclipse', 'Creative Commons', 'Apache', 'Mozilla', 'Perl'],
+                choices: ['MIT License', 'IBM', 'ISC', 'Eclipse', 'Creative Commons', 'Apache', 'Mozilla', 'Perl', new inquirer.Separator(), 'none'],
                 message: questions[4],
                 name: 'license',
             },
