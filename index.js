@@ -5,7 +5,7 @@ const fs = require = ('fs')
 
 // TODO: Create an array of questions for user input
 // const licenses = Choices(["Choice A", "choice B"])
-const questions = ['What is the title of your project?', 'Write a short description of your project:', 'Chose a License'];
+const questions = ['What is the title of your project?', 'Write a short description of your project', 'write instructions on how to install the application', 'explain how to use the application', 'Chose a License', 'Explain your contributing guidlines', 'Write out instructions on how to test the application'];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
@@ -28,10 +28,25 @@ function init() {
                 name: 'description',
             },
             {
+                type: 'editor',
+                message: questions[2],
+                name: 'installation',
+            },
+            {
+                type: 'editor',
+                message: questions[3],
+                name: 'usage',
+            },
+            {
                 type: 'list',
                 choices: ['MIT License', 'Other License'],
-                message: questions[2],
+                message: questions[4],
                 name: 'license',
+            },
+            {
+                type: 'editor',
+                message: questions[4],
+                name: 'contributing',
             },
         ])
         .then((response) => {
