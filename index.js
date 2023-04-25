@@ -39,7 +39,7 @@ function init() {
             },
             {
                 type: 'list',
-                choices: ['MIT License', 'Other License'],
+                choices: ['MIT License', 'IBM', 'ISC', 'Eclipse', 'Creative Commons', 'Apache', 'Mozilla', 'Perl'],
                 message: questions[4],
                 name: 'license',
             },
