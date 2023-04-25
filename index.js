@@ -1,16 +1,16 @@
 // TODO: Include packages needed for this application
-const markdown = require('./utils/generateMarkdown')
+const generateMarkdown = require('./utils/generateMarkdown');
 const inquirer = require('inquirer');
-const fs = require = ('fs')
+const fs = require('fs');
 
 // TODO: Create an array of questions for user input
 // const licenses = Choices(["Choice A", "choice B"])
-const questions = ['What is the title of your project?', 'Write a short description of your project', 'Write instructions on how to install the application', 'Write out how to use the application', 'Chose a License', 'Write out your contributing guidlines', 'Write out instructions on how to test the application', 'Write out instructions on how to test the application', 'What is your Github username?', 'What is your email?'];
+const questions = ['What is the title of your project?', 'Write a short description of your project', 'Write instructions on how to install the application', 'Write out how to use the application', 'Chose a License', 'Write out your contributing guidlines', 'Write out instructions on how to test the application', 'What is your Github username?', 'What is your email?'];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeToFile(fileName, data, (err) =>
-        err ? console.error(err) : console.log('Success!')
+    fs.writeFile(fileName, data, (err) =>
+        err ? console.error(err) : console.log('README Created')
     )
 }
 // TODO: Create a function to initialize app
@@ -54,21 +54,20 @@ function init() {
                 name: 'test',
             },
             {
-                type: 'editor',
+                type: 'input',
                 message: questions[7],
                 name: 'github',
             },
             {
-                type: 'editor',
+                type: 'input',
                 message: questions[8],
                 name: 'email',
             },
         ])
         .then((response) => {
-            markdown.generateMarkdown(response);
-            console.log(response.title);
-            console.log(response.description);
-            console.log(response.license);
+            let fileName = 'newREADME.md'
+            let newMarkdown = generateMarkdown(response);
+            writeToFile(fileName, newMarkdown)
         })
 
 }
