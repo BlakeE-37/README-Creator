@@ -1,4 +1,5 @@
 // TODO: Include packages needed for this application
+const markdown = require('./utils/generateMarkdown')
 const inquirer = require('inquirer');
 const fs = require = ('fs')
 
@@ -34,6 +35,7 @@ function init() {
             },
         ])
         .then((response) => {
+            // markdown.generateMarkdown(response);
             console.log(response.title);
             console.log(response.description);
             console.log(response.license);
