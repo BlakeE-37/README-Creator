@@ -11,6 +11,8 @@
 
 ## Installation
 ## Usage
+## Credits
+[NPM Inquirer Documentation](https://www.npmjs.com/package/inquirer#objects)
 ## License
 ## Contributing
 ## Tests
