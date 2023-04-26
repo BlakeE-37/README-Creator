@@ -16,7 +16,7 @@ To instal the application, fork the repository and then run 'npm i' in your term
 
 ## Usage
 To use the application, open the terminal in the appropriate directory and run 'node index.js'. Then simply answer the questions in the terminal.  
-[Here is a video showing how to use the application]()
+[Here is a video showing how to use the application](https://youtu.be/ROz47JsZ7uU)
 
 ## Credits
 * [NPM Inquirer Documentation](https://www.npmjs.com/package/inquirer#objects)  
